@@ -45,11 +45,84 @@ function isInRange(num, range) {
 
 //returns the negated solution
 function negate(arr) {
-    return arr.map(val = > -val;
+    return arr.map(val => -val);
 )
 }
 
 function negate(arr) {
-    return arr.map(val => -val;
-)
+    return arr.map(val => -val);
+
+}
+
+// looks for the same word ignoring case
+function match(s1, s2) {
+    return s1.localeCompare(s2, undefined, { sensitivity: 'base' }) === 0;
+}
+function match(s1, s2) {
+    return s1.toLowerCase() === s2.toLowerCase();
+}
+
+// used to figure whether to add or subtract to get to a certain number
+function operation(num1, num2) {
+    if (num1 + num2 == 24) {return "added"}
+    if (num1 - num2 == 24) {return "subtracted"}
+    if (num1 * num2 == 24) {return "multiplied"}
+    if (num1 / num2 == 24) {return "divided"}
+    return null
+}
+// returns the first and last item in an array
+function firstLast(arr) {
+    return [arr.shift(), arr.pop()]
+}
+// returns day of month in numbers
+function monthName(num) {
+    let monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    let month = monthArray[num -1]
+    return month
+}
+// returns array divided by -
+function numberSyllables(word) {
+    return word.split("-").length;
+}
+
+// returns the number of slices per person if the pizza is less than 12 slices
+function equalSlices(total, people, each) {
+    return people * each <= total
+}
+//find the missing angle
+function missingAngle(angle1, angle2) {
+    return angle1 + angle2 < 90 ? 'obtuse'
+        : angle1 + angle2 > 90 ? 'acute'
+            : 'right';
+}
+// when looking for var split by .\
+function retrieveMajor(semver) {
+    return semver.split(".")[0];
+}
+
+function retrieveMinor(semver) {
+    return semver.split(".")[1];
+}
+
+function retrievePatch(semver) {
+    return semver.split(".")[2];
+}
+
+// check if both are the same sign
+function both(n1, n2) {
+    return Math.sign(n1) === Math.sign(n2);
+}
+
+// check for true or false
+function isTruthy(input) {
+    if (input) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
+}
+// return the array
+function Go(num) {
+    return "-".repeat(num);
 }
