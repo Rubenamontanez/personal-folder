@@ -43,16 +43,16 @@ function isInRange(num, range) {
     return num >= range.min && num <= range.max;
 }
 
-//returns the negated solution
-function negate(arr) {
-    return arr.map(val => -val);
-)
-}
+// //returns the negated solution
+// function negate(arr) {
+//     return arr.map(val => -val);
+// )
+// }
 
-function negate(arr) {
-    return arr.map(val => -val);
-
-}
+// function negate(arr) {
+//     return arr.map(val => -val);
+//
+// }
 
 // looks for the same word ignoring case
 function match(s1, s2) {
@@ -75,11 +75,11 @@ function firstLast(arr) {
     return [arr.shift(), arr.pop()]
 }
 // returns day of month in numbers
-function monthName(num) {
-    let monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-    let month = monthArray[num -1]
-    return month
-}
+// function monthName(num) {
+//     let monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+//     let month = monthArray[num -1]
+//     return month
+// }
 // returns array divided by -
 function numberSyllables(word) {
     return word.split("-").length;
@@ -112,6 +112,10 @@ function retrievePatch(semver) {
 function both(n1, n2) {
     return Math.sign(n1) === Math.sign(n2);
 }
+// inverts an array neg to pos and pos to neg
+// function additiveInverse(arr) {
+//     return arr.map(x => -x);
+// }
 
 // check for true or false
 function isTruthy(input) {
@@ -125,4 +129,31 @@ function isTruthy(input) {
 // return the array
 function Go(num) {
     return "-".repeat(num);
+}
+
+// ensures the "word" is between last and first
+function isBetween(first, last, word) {
+    return word > first && word < last;
+}
+// adds ly to the end of each word in array
+function addEnding(arr, ending) {
+    // return arr.map(word => word + ending);
+}
+
+//checks if numbers mult of 3 5
+function FizzBuzz(num) {
+    if ( (num % 3 == 0) && (num % 5 == 0) ) {
+        return "FizzBuzz";
+    } else if (num % 5 == 0) {
+        return "Buzz";
+    } else if (num % 3 == 0) {
+        return "Fizz";
+    } else {
+        return num.toString()
+    }
+}
+
+// returning answers as a string
+function smallerNum(n1, n2) {
+    return Math.min(n1, n2).toString();
 }
