@@ -248,8 +248,21 @@ You cannot assume the size of the array.
 You can assume that you do get an array and if the array is empty, return 0.*/
 
 function sum(numbers) {
+    var sum = 0;
+//     for (var i= 0; i<numbers.length; i++){
+//         sum += numbers[i]
+//     }
+//     return sum;
+// }
+    var i = 0;
+    while(i < numbers.length){
+        sum += numbers[i];
+        i++
+    }
 
-
+    numbers.forEach(function(items){
+        sum +=items;
+    })
 }
 
 
@@ -262,11 +275,11 @@ Simple, remove the spaces from the string, then return the resultant string.
 */
 
 function noSpace(x) {
-
+    return x.trim("");
 }
 
 
-// console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B')); // output '8j8mBliB8gimjB8B8jlB'
+console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B')); // output '8j8mBliB8gimjB8B8jlB'
 // console.log(noSpace('8 8 Bi fk8h B 8 BB8B B B  B888 c hl8 BhB fd')); // output '88Bifk8hB8BB8BBBB888chl8BhBfd'
 // console.log(noSpace('8aaaaa dddd r     ')); // output '8aaaaaddddr'
 
@@ -277,7 +290,10 @@ All inputs will be valid.
 */
 
 function switcher(x) {
-
+for (var i = 0; i<x.length; i++){
+    console.log("position is currently" + x[i]);
+    return string += reverseAlphabetArray[x[i]]
+}
 }
 
 // console.log(switcher(['24', '12', '23', '22', '4', '26', '9', '8'])); // outputs 'codewars'
@@ -322,7 +338,8 @@ Don't forget to return the result.
 Remember that the values are in an object.*/
 
 function volumeOfBox(sizes) {
-
+// return sizes.height + sizes.length + sizes.height;
+return sizes["height"] * sizes["length"] * sizes["width"]
 }
 
 
@@ -340,11 +357,13 @@ keysAndValues({ a: 1, b: 2, c: 3 })
 ➞ [["a", "b", "c"], [1, 2, 3]]
 keysAndValues({ a: "Apple", b: "Microsoft", c: "Google" })
 ➞ [["a", "b", "c"], ["Apple", "Microsoft", "Google"]]
-keysAndValues({ key1: true, key2: false, key3: undefined })
+keysAndValues({ key1: true, key2: fal   se, key3: undefined })
 ➞ [["key1", "key2", "key3"], [true, false, undefined]]*/
 
 function keysAndValues(obj) {
-
+    var  keys = Object.keys(obj);
+    var values = Object.values(obj);
+    return [keys,values];
 }
 
 
