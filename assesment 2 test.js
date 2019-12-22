@@ -10,6 +10,7 @@
 
 // Write a function named isNegative that accepts a number and returns true or false based on whether the input is negative.
 function isNegative(num){
+    // return num <10;
     num =parseFloat(num);
     if(num < 0) {
         return true;
@@ -92,6 +93,10 @@ function convertNameToObject(str){
 
     return word;
 }
+//other solution to the problem
+//     var names = str.split(' ');
+//  word.firstName = names[0];
+// word.lastName = names[1];
 
 // console.log(convertNameToObject('Harry Potter')); // {firstName: 'Harry', lastName: 'Potter'}
 // convertNameToObject('Ron Weasley') // {firstName: 'Ron', lastName: 'Weasley'}
@@ -105,9 +110,14 @@ function capitalizeName(str){
     });
     return result.join(" ");
 }
-
 capitalizeName('ron weasley') // "Ron Weasley"
-
+//     var output = [];
+//     var names = str.split(' ');
+// names.forEach(function(str){
+//     var capalized = name.charAt(0).toUpperCase() + name.substring(1);
+//     output.push(capalized)
+// }
+// return output.join(' ');
 // Write a function named capitalizeAllNames that accepts an array of strings where each string is in the format described in the previous problem, and returns an array of strings where each string contains a capitalized named.
 function capitalizeAllNames(arr){
     var capitalizedNames = [];
